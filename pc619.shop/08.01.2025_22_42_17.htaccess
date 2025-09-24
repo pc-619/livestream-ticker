@@ -1,0 +1,16 @@
+#default index page
+DirectoryIndex "marquee_user.php"
+
+#PHP code in HTML file
+AddType fcgid-script .php .htm .html .phtml
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} pc619\.shop [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://pc619.shop/$1 [R,L]
+
+<IfModule mod_security2.c>
+SecRuleRemoveById 900011
+SecRuleRemoveById 391213
+
+</IfModule>
