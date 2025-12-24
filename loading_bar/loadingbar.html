@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Bar</title>
+    <style>
+
+        body{
+            background-color: #222;
+        }
+
+        div#bar_border{
+            margin-top: 500px;
+            border: 4px solid black;
+            background-color: #FFF;
+            width: 500px;
+            height: 20px;
+        }
+
+        div#progress{
+            background-color: #575757;
+            width: 0%;
+            height: 20px;
+            float: right;
+        }
+
+        p{
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 144px; color: white;">THANK YOU...</h1>
+    
+    <div id="bar_border">
+        <div id="progress"></div>
+    </div>
+
+    <p id="textbox" style="font-size: 72px; color: white;">
+        Ending soon...
+    </p>
+
+    <!-- <script>
+
+        var textbox  = document.getElementById("textbox");
+        var progress = document.getElementById("progress");
+        // progress.style.width = ;
+        // console.log("WIDTH TEST: " + progress.style.width);
+        // console.log("TYPEOF progress:", typeof progress.style.width);
+
+        // Set the date we're counting down to -   # mins   convert to secs   convert to ms
+        var countDownDate = new Date().getTime() + 15     * 60              * 1000;
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for hours, minutes and seconds
+        //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var updatedMin = minutes;
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var updatedSec = seconds;
+
+
+
+        
+
+        if(0 <= minutes && minutes < 10){
+            updatedMin = "0" + minutes;
+        }else{
+            updatedMin = minutes;
+        }
+
+        // Display the result in the element with id="demo"
+        if(0 <= seconds && seconds < 10){
+            updatedSec = ":0" + seconds;
+            //document.getElementById("textbox").innerHTML = minutes + ":0" + seconds;
+        }else{
+            updatedSec = ":" + seconds;
+            //document.getElementById("textbox").innerHTML = minutes + ":" + seconds;
+        }
+
+        var timeLeft = updatedMin + updatedSec;
+
+        console.log("TIME LEFT: " + timeLeft);
+        let timeLeftSec = parseInt(minutes) * 60 + parseInt(seconds);
+        console.log("TIME LEFT in seconds: " + timeLeftSec);
+
+        console.log("WIDTH BEFORE: " + progress.style.width);
+        progress.style.width = timeLeftSec / 9 + "%";
+        console.log(timeLeftSec + "%");
+
+        document.getElementById("textbox").innerHTML = timeLeft;
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("textbox").innerHTML = "";
+        }
+        }, 1000);
+
+
+        // let width = 1;
+        // function oncePerMinute(callback) {
+        //     var timerFunc = function () {
+        //         // get the current time rounded down to a whole minute (with a 10% margin)
+        //         var now = 1000 * Math.floor(Date.now() / 1000 + 0);
+        //         var then = Date.parse("08 Aug 2025 22:54:00 GMT");
+        //         // run the callback
+        //         callback(now, then);
+        //         // wait for the next whole second
+        //         setTimeout(timerFunc, now - Date.now());
+        //         console.log("NOWd: " + now);
+        //         console.log("THEN: " + then);
+        //         console.log("DIFFERENCE: " + (then - now))
+        //         console.log((then - now) / 1000, "seconds left.");
+        //         console.log("WIDTH NOW: " + progress.style.width);
+                
+        //         if(progress.style.width >= "0%"){
+        //             progress.style.width = "0%";
+        //         }
+
+        //         // when bar is done loading
+        //         if(progress.style.width == "100%" ){
+        //             document.getElementById("textbox").textContent = "Done.";
+        //         }
+        //         else{
+        //             progress.style.width = width + "%";
+        //             width = (then - now) / 1000 * 9 / 100;
+        //         }
+
+        //         document.getElementById("textbox").textContent = progress.style.width + " complete.";
+
+
+        //         //console.log(new Date().getTime() / 1000);
+        //     };
+        //     timerFunc();
+        // }
+
+        // // create a demo timer
+        // oncePerMinute(function (now, then) {
+        //     //document.getElementById('php_section').textContent = new Date(now).toString();
+        // });
+        
+        // // add an artificial 0.5 second delay for the second timer
+        // setTimeout(function () {
+            
+        //     oncePerMinute(function (now, then) {
+        //         document.getElementById("textbox").textContent = (then.toDateString() * 1000, " Another second has passed.");
+        //         var progress = document.getElementById("progress");
+        //         var border = document.getElementById("bar_border");
+        //         //console.log(window.getComputedStyle(progress).width);
+
+        //     })
+        // }, 500);
+    </script> -->
+</body>
+</html>

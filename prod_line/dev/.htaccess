@@ -1,0 +1,14 @@
+#Username / password authentication
+AuthName "Access restricted."
+AuthType Basic
+AuthUserFile "/services/users/zfh4p1/hamhus27/www/pc619.shop/dev/.htpasswd"
+Require valid-user
+
+#PHP code in HTML file
+AddType fcgid-script .php .htm .html .phtml
+
+<IfModule mod_security2.c>
+SecRuleRemoveById 900011
+SecRuleRemoveById 391213
+
+</IfModule>
